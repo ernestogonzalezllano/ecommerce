@@ -1,0 +1,80 @@
+@import "bp.scss";
+@import "var.scss";
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+.header {
+  background: white;
+  display: grid;
+  grid-template-rows: 4rem;
+  align-items: center;
+  width: stretch;
+  width: -moz-available;
+  .logo {
+    width: 2rem;
+    padding: 1rem;
+  }
+  .brand {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #0e0e0e;
+  }
+
+  @include respond-to("default") {
+    grid-template-columns: 4rem 4rem 1fr 4rem;
+    .brand {
+      visibility: collapse;
+    }
+  }
+  @include respond-to("small") {
+    grid-template-columns: 4rem 1fr 20rem 4rem;
+  }
+}
+.headerBrand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.content {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.content::-webkit-scrollbar:vertical {
+  width:1rem;
+}
+
+.content::-webkit-scrollbar-button:increment,.content::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.content::-webkit-scrollbar:horizontal {
+  height: 1rem;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: $--primary-color;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 9999px;  
+}
+
+
+
+
+
+
+
+.footer {
+  height: 0rem;
+}
