@@ -131,6 +131,9 @@ Los usuarios administradores pueden manejar el sitio, los productos que se lista
     +  filtrar as ordenes por su estado (creada, procesando, cancelada, completa).
     + ver los detalles de una orden específica, asi puedo revisarla y actualizar su estado.
     +  cambiar el estado de una orden (creada => procesando, procesando => cancelada || completa).
+    <p align='center'>
+    <img alt="Ecommerce" style="border-radius:5px" src='./img/listOrders.png' </img>
+</p>
 
 - GESTION DE USUARIOS:
     +  hacer que un usuario se convierta en admin.
